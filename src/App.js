@@ -7,7 +7,8 @@ import HttpApi from 'i18next-http-backend';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'flag-icon-css/css/flag-icons.min.css';
-import i18next from 'i18next';
+import i18next from 'i18next';  
+import { useEffect } from 'react';
 
 i18n
   .use(initReactI18next)
@@ -22,8 +23,7 @@ i18n
     },
     backend:{
       loadPath: '/assets/locales/{{lng}}/translation.json',
-    },
-    react:{ useSuspense: false}
+    } 
   });
 
 const languages = [
@@ -51,13 +51,13 @@ const GlobeIcon = ({width = 24, height = 24}) => (
 )
 
 function App() {
-
+ 
   const { t } = useTranslation();
 
   const releaseDate = new Date ('2023-08-08')
   const timeDiff = new Date - releaseDate
   const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24 ))
-
+ 
   return ( 
     <div className="container">
       <div className="d-flex justify-content-end">
@@ -68,7 +68,10 @@ function App() {
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             {languages.map(({code, name, country_code}) => ( 
               <li key={country_code}>
-                <button className="dropdown-item" onClick={() => i18next.changeLanguage(code)}>
+                <button 
+                  className="dropdown-item" 
+                  onClick={() => i18next.changeLanguage(code)} 
+                >
                   <span className={`flag-icon flag-icon-${country_code} mx-2`}></span>
                   {name}
                 </button>

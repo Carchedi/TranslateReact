@@ -1,0 +1,6 @@
+{
+    "welcome": "Willkommen bei React und React-i18next",
+    "text01": "erster text",
+    "text02": "zweiter text",
+    "text03": "seit dem start sind {{days}} Tage vergangen.."
+}

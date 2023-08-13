@@ -1,6 +1,6 @@
 {
-    "welcome": "Willkommen bei React und React-i18next",
-    "text01": "erster text",
+    "welcome":"Entdecken Sie alle unsere Gerichte",
+    "caption":"Unsere digitale Speisekarte wird in Ihrer Sprache angeboten",
     "text02": "zweiter text",
     "text03": "seit dem start sind {{days}} Tage vergangen.."
 }

@@ -1,6 +1,6 @@
 {
-    "welcome": "Welcome to React and react-i18next",
-    "text01": "first text",
+    "welcome":"discover all our dishes",
+    "caption": "Our digital menu is offered in your language",
     "text02": "second text",
     "text03": "it's been {{days}} days since start."
 }

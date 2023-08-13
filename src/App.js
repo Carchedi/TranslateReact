@@ -2,12 +2,12 @@ import './App.css';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpApi from 'i18next-http-backend';
-
+import HttpApi from 'i18next-http-backend'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'flag-icon-css/css/flag-icons.min.css';
 import i18next from 'i18next';  
+import Banner from './components/banner';
 
 i18n
   .use(initReactI18next)
@@ -64,30 +64,10 @@ function App() {
  
   return ( 
     <div className="container">
-      <div className="d-flex justify-content-end">
-        <div className="dropdown">
-          <button className="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <GlobeIcon />
-          </button>
-          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            {languages.map(({code, name, country_code}) => ( 
-              <li key={country_code}>
-                <button 
-                  className="dropdown-item" 
-                  onClick={() => i18next.changeLanguage(code)} 
-                >
-                  <span className={`flag-icon flag-icon-${country_code} mx-2`}></span>
-                  {name}
-                </button>
-              </li>
-            ))}            
-          </ul>
-        </div>
-      </div>
+      
+
+      <Banner mainText={t('welcome')} caption={t('caption')}/>
       <div className='d-flex flex-column align-items-start'>
-          <h1 className='font-weight-normal mb-3'>
-            {t('welcome')}
-          </h1>
           <p>{t('text01')}</p>
           <p>{t('text02')}</p>
           <p>{t('text03', {days})}</p>

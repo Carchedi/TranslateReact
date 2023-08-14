@@ -56,22 +56,33 @@ const GlobeIcon = ({width = 18, height = 18}) => (
 
 function App() {
  
-  const { t } = useTranslation();
-
-  const releaseDate = new Date ('2023-08-08')
-  const timeDiff = new Date - releaseDate
-  const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24 ))
- 
+  //Generate a QRCode online: https://qr.io/
+  const { t } = useTranslation(); 
+  
   return ( 
     <div className="container">
-      
-
-      <Banner mainText={t('welcome')} caption={t('caption')}/>
-      <div className='d-flex flex-column align-items-start'>
-          <p>{t('text01')}</p>
-          <p>{t('text02')}</p>
-          <p>{t('text03', {days})}</p>
+      <div className="d-flex justify-content-end">
+        <div className="dropdown">
+          <button className="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <GlobeIcon />
+          </button>
+          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            {languages.map(({code, name, country_code}) => ( 
+              <li key={country_code}>
+                <button 
+                  className="dropdown-item" 
+                  onClick={() => i18next.changeLanguage(code)} 
+                >
+                  <span className={`flag-icon flag-icon-${country_code} mx-2`}></span>
+                  {name}
+                </button>
+              </li>
+            ))}            
+          </ul>
+        </div>
       </div>
+
+      <Banner mainText={t('welcome')} caption={t('caption')} chooseLanguage={t('chooseLang')}/>
     </div>
   )
 }

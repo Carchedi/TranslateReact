@@ -1,6 +1,5 @@
 {
     "welcome": "descubra todos os nossos pratos",
     "caption": "Nosso cardápio digital é oferecido no seu idioma",
-    "text02": "segundo texto",
-    "text03": "Fazem {{days}} dias desde o inicio."
+    "chooseLang": "Escolha o seu idioma" 
 }

@@ -1,6 +1,5 @@
 {
     "welcome":"Entdecken Sie alle unsere Gerichte",
     "caption":"Unsere digitale Speisekarte wird in Ihrer Sprache angeboten",
-    "text02": "zweiter text",
-    "text03": "seit dem start sind {{days}} Tage vergangen.."
+    "chooseLang": "Wähle deine Sprache" 
 }

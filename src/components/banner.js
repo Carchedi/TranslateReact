@@ -10,6 +10,10 @@ function Banner(props){
                         </h1>
                          <hr></hr>
                          <h3>{props.caption}</h3>
+
+                        <button type='button' className='btn btn-secondary btn-xl js-scrll-trigger'>
+                            {props.chooseLanguage}
+                        </button> 
                     </div>
                     
                 </div>

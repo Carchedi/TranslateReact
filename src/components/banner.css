@@ -24,4 +24,16 @@
 
 .masthead p {
   font-weight: 300;
-} 
+}
+
+.masthead button{
+  background-color: #F05F40;
+  border-color: #F05F40;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  cursor: pointer;
+}

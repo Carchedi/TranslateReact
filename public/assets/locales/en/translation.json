@@ -1,6 +1,6 @@
 {
     "welcome":"discover all our dishes",
     "caption": "Our digital menu is offered in your language",
-    "text02": "second text",
-    "text03": "it's been {{days}} days since start."
+    "chooseLang": "Choose your language",
+    "text03": "seit dem start sind {{days}} Tage vergangen.."
 }
